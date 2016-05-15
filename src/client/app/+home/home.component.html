@@ -1,14 +1,25 @@
-<p>
-  Howdy! Here's a list of awesome computer scientists.
-  Do you know any others? Add to the list yourself.
-</p>
+<div class="container content">
+  <div class="page-header">
+    <h1>Sea battle game based on Angular2 and Firebase</h1>
+  </div>
 
-<form (submit)="addName()">
-  <input [(ngModel)]="newName" placeholder="Awesome Computer Scientist">
-  <button type="submit">Add</button>
-</form>
+  <p>This is a multiplayer game, that allows user to authenticate, view games history and mainly play with other users.</p>
+  <p>User with whom one will play is selected automatically from queue.</p>
+  <!--<div class="page-header">
+    <h1>Creating a list</h1>
+  </div>
 
+  <form class="form-inline" (submit)="addName()">
+    <div class="form-group">
+      <label for="user_action">User action</label>
 
-<ul>
-  <li *ngFor="let name of nameListService.get()">{{name}}</li>
-</ul>
+      <input type="text" class="form-control" id="user_action" placeholder="Input action" [(ngModel)]="newName" />
+    </div>
+
+    <button type="submit" class="btn btn-default">Add</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let item of items | async">{{item.letter}} : {{item.number}}</li>
+  </ul>-->
+</div>

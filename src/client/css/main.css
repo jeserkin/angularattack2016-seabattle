@@ -1,4 +1,21 @@
-/* Reset */
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.container.content {
+  padding: 0px 15px 0;
+}
+
+/*
+!* Reset *!
 html,
 body,
 div {
@@ -7,12 +24,12 @@ div {
   padding: 0;
 }
 
-/* Box-sizing border-box */
+!* Box-sizing border-box *!
 * {
   box-sizing: border-box;
 }
 
-/* Set up a default font and some padding to provide breathing room */
+!* Set up a default font and some padding to provide breathing room *!
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 16px;
@@ -61,3 +78,4 @@ button {
 button:hover {
   background-color: #28739e;
 }
+*/

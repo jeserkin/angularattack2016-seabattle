@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "webpack": "registry:npm/webpack#1.12.9+20160418172948",
     "xhr2": "github:gdi2290/typed-xhr2#69f2b8d40d0cd407c1b2a2f2f41fecc6852cabbb"
   },
   "devDependencies": {},
@@ -12,6 +13,7 @@
     "chokidar": "github:DefinitelyTyped/DefinitelyTyped/chokidar/chokidar.d.ts#ae81e340a9e897167cfef3122a5a3aed04293814",
     "es6-shim": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts#6697d6f7dadbf5773cb40ecda35a76027e0783b2",
     "express": "github:DefinitelyTyped/DefinitelyTyped/express/express.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
+    "firebase": "registry:dt/firebase#2.4.1+20160412125105",
     "glob": "github:DefinitelyTyped/DefinitelyTyped/glob/glob.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
     "gulp": "github:DefinitelyTyped/DefinitelyTyped/gulp/gulp.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
     "gulp-load-plugins": "github:DefinitelyTyped/DefinitelyTyped/gulp-load-plugins/gulp-load-plugins.d.ts#e081148d88b857d66509e3b46edbd08b3f75f96a",

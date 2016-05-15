@@ -1,3 +1,1 @@
-/**
- * Created by eugene on 14-May-16.
- */
+export * from './header.component';

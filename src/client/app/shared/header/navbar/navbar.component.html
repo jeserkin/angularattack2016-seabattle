@@ -1,4 +1,12 @@
-<nav>
-  <!--<a [routerLink]="['/']">HOME</a>-->
-  <!--<a [routerLink]="['/about']">ABOUT</a>-->
-</nav>
+<div id="navbar" class="collapse navbar-collapse">
+  <ul class="nav navbar-nav">
+    <li linkActive="active">
+      <a linkTo="/">Home</a>
+    </li>
+    <li linkActive="active">
+      <a linkTo="/about">About</a>
+    </li>
+  </ul>
+
+  <sb-toolbar></sb-toolbar>
+</div><!--/.nav-collapse -->

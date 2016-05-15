@@ -1,11 +1,10 @@
 import * as gulp from 'gulp';
+import { join } from 'path';
 import * as util from 'gulp-util';
 
-import { APP_BASE, PROD_DEST } from '../../config';
+import { APP_BASE, PROD_DEST, TMP_DIR } from '../../config';
 
 export = () => {
-    util.log(APP_BASE + 'CNAME');
-
-    return gulp.src(APP_BASE + 'CNAME')
-        .pipe(gulp.dest(PROD_DEST));
+    return gulp.src(join(APP_BASE, 'CNAME'))
+        .pipe(gulp.dest(TMP_DIR));
 };

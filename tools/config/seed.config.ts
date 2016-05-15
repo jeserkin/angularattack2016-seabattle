@@ -351,6 +351,10 @@ export class SeedConfig {
       },
       'rxjs': {
         defaultExtension: 'js'
+      },
+      '@ngrx/router': {
+        main: 'index.js',
+        defaultExtension: 'js'
       }
     }
   };

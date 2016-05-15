@@ -1,15 +1,23 @@
-import { APP_BASE_HREF } from '@angular/common';
-import { enableProdMode, provide } from '@angular/core';
-import { bootstrap } from '@angular/platform-browser-dynamic';
-import { ROUTER_PROVIDERS } from '@angular/router';
+import {APP_BASE_HREF} from '@angular/common';
+import {enableProdMode, provide} from '@angular/core';
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {provideRouter} from '@ngrx/router';
 
 import { AppComponent } from './app.component';
+import { routes } from './app.routes';
 
-if ('<%= ENV %>' === 'prod') { enableProdMode(); }
+import {FIREBASE_PROVIDERS, defaultFirebase} from 'angularfire2';
+
+if ('<%= ENV %>' === 'prod') {
+  enableProdMode();
+}
 
 bootstrap(AppComponent, [
-  ROUTER_PROVIDERS,
-  provide(APP_BASE_HREF, { useValue: '<%= APP_BASE %>' })
+  FIREBASE_PROVIDERS,
+  defaultFirebase('https://incandescent-torch-2538.firebaseIO.com'),
+
+  provideRouter(routes),
+  provide(APP_BASE_HREF, {useValue: '<%= APP_BASE %>'})
 ]);
 
 // In order to start the Service Worker located at "./worker.js"

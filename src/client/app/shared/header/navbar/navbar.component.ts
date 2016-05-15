@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+
+import { ToolbarComponent } from './toolbar/index';
 
 @Component({
-  selector: 'sd-navbar',
-  templateUrl: 'app/shared/navbar/navbar.component.html',
-  styleUrls: ['app/shared/navbar/navbar.component.css'],
-  directives: [ROUTER_DIRECTIVES]
+  selector: 'sb-navbar',
+  templateUrl: 'app/shared/header/navbar/navbar.component.html',
+  directives: [ToolbarComponent]
 })
 export class NavbarComponent {}
