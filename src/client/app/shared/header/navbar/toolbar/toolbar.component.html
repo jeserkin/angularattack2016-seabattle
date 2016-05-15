@@ -1,8 +1,12 @@
 <ul class="nav navbar-nav navbar-right">
-  <li>
-    <a href="#">Sign in</a>
+  <li linkActive="active" *ngIf="!authenticated">
+    <a linkTo="/signin">Sign in</a>
   </li>
-  <li>
-    <a href="#">Register</a>
+  <li linkActive="active" *ngIf="!authenticated">
+    <a linkTo="/signup">Sign Up</a>
+  </li>
+
+  <li *ngIf="authenticated">
+    <a (click)="signOut()" role="button">Sign out</a>
   </li>
 </ul>

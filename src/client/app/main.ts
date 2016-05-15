@@ -6,15 +6,20 @@ import {provideRouter} from '@ngrx/router';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 
-import {FIREBASE_PROVIDERS, defaultFirebase} from 'angularfire2';
+import * as AngularFire2 from 'angularfire2';
 
 if ('<%= ENV %>' === 'prod') {
   enableProdMode();
 }
 
 bootstrap(AppComponent, [
-  FIREBASE_PROVIDERS,
-  defaultFirebase('https://incandescent-torch-2538.firebaseIO.com'),
+  AngularFire2.FIREBASE_PROVIDERS,
+  AngularFire2.defaultFirebase('https://incandescent-torch-2538.firebaseIO.com'),
+  AngularFire2.firebaseAuthConfig({
+    provider: AngularFire2.AuthProviders.Password,
+    method: AngularFire2.AuthMethods.Password,
+    remember: 'sessionOnly'
+  }),
 
   provideRouter(routes),
   provide(APP_BASE_HREF, {useValue: '<%= APP_BASE %>'})

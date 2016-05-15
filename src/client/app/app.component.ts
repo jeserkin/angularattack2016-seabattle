@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 
-import { NameListService, FooterComponent, HeaderComponent } from './shared/index';
+import { UserService, FooterComponent, HeaderComponent } from './shared/index';
 
 @Component({
   selector: 'seabattle-app',
-  viewProviders: [NameListService],
+  providers: [UserService],
   templateUrl: 'app/app.component.html',
   directives: [FooterComponent, HeaderComponent]
 })
-export class AppComponent {
-}
+export class AppComponent {}

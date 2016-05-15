@@ -1,0 +1,27 @@
+<div class="container content">
+
+  <form class="form-signup" #form="ngForm" (submit)="signUp(form)">
+    <h2 class="form-signup-heading">Please sign up</h2>
+
+    <div class="form-group">
+      <label for="email">Email address</label>
+
+      <input type="text" class="form-control" id="email" [(ngModel)]="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+
+      <input type="password" class="form-control" id="password" [(ngModel)]="password" />
+    </div>
+
+    <div class="form-group">
+      <label for="repassword">Retype password</label>
+
+      <input type="password" class="form-control" id="repassword" [(ngModel)]="repassword" />
+    </div>
+
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Sign up</button>
+  </form>
+
+</div>
