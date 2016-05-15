@@ -1,0 +1,36 @@
+.avatar > img {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 100%;
+}
+
+.navbar-nav > li > .avatar {
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav > li > .avatar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.navbar-nav > li > .avatar {
+  position: relative;
+  display: block;
+  padding: 10px 2px;
+}
+
+.navbar-default .navbar-nav > li > .avatar {
+  color: #777;
+}
+
+.navbar-default .navbar-nav > li > .avatar:hover,
+.navbar-default .navbar-nav > li > .avatar:focus {
+  color: #333;
+  background-color: transparent;
+}

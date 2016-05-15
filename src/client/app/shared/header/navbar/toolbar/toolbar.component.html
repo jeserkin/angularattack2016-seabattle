@@ -6,7 +6,29 @@
     <a linkTo="/signup">Sign Up</a>
   </li>
 
-  <li *ngIf="authenticated">
-    <a (click)="signOut()" role="button">Sign out</a>
+  <li *ngIf="authenticated && userInfo">
+    <div class="avatar">
+      <img src="{{ userInfo.password.profileImageURL }}" alt="{{ userInfo.password.email }}"/>
+    </div>
+  </li>
+  <li class="dropdown" *ngIf="authenticated">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" *ngIf="userInfo">
+      {{ userInfo.password.email }} <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="#">Play</a>
+      </li>
+      <li>
+        <a href="#">Scores</a>
+      </li>
+      <li>
+        <a href="#">Rules</a>
+      </li>
+      <li role="separator" class="divider"></li>
+      <li>
+        <a (click)="signOut()" role="button">Sign out</a>
+      </li>
+    </ul>
   </li>
 </ul>
