@@ -45,3 +45,8 @@ tmp
 
 gulpfile.js
 gulpfile.js.map
+
+# Firebase related files
+database.rules.json
+firebase.json
+.firebaserc
